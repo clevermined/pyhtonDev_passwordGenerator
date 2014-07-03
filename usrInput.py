@@ -7,3 +7,5 @@ print ('''Welcome,
 time.sleep(1)
 print (gPasswordGen.getCode())
 
+if __name__ == '__main__':
+   main()
