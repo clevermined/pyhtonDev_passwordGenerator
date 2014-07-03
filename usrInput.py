@@ -1,5 +1,7 @@
 import gPasswordGen
 import time
+import os
+import sys
 
 print ('''Welcome,
           We hope this tool will help you keep your files and or accounts
@@ -7,5 +9,4 @@ print ('''Welcome,
 time.sleep(1)
 print (gPasswordGen.getCode())
 
-if __name__ == '__main__':
-   main()
+

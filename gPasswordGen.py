@@ -24,4 +24,8 @@ This is a Alphanumeric Password Genarator
 it is default setting is for 10 characters
 you can enter the any other length you desire
 """
-      
+def main():
+	getCode(sys.argv[1])
+	
+if __name__ == '__main__':
+	main()      
