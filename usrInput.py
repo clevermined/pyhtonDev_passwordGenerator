@@ -1,7 +1,6 @@
 import gPasswordGen
 import time
-import os
-import sys
+
 
 print ('''Welcome,
           We hope this tool will help you keep your files and or accounts

@@ -27,8 +27,8 @@ You can enter the any other length you desire.
 """
 
 def main():
-	getCode(sys.argv[1])
-	
+	getCode()
+    
 if __name__ == '__main__':
 	main()      
 
