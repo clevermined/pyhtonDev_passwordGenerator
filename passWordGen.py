@@ -31,9 +31,10 @@ def sendMail():
     msg['From'] = 'localhost.local.domain'
     msg['To'] = 'localhost.local.domain'
 
-    smtpObject = smtplib.SMTP('localhost')
-    smtpObject.sendmail('sender',['receiver'],msg.as_string())
-    smtpObject.quit()
+    server = smtplib.SMTP('localhost')
+    server.set_debuglevel(1)
+	server.sendmail('sender',['receiver'],msg.as_string())
+    server.quit()
 
 def main():
     getCode()

@@ -17,9 +17,8 @@ def getCode( char = string.ascii_uppercase + string.digits
     except NameError:
       print("A Numermic Interger Value is Required To Process This Request: ")
       sys.exit(main())
-
-    try:		#open file for password logging
-      fileStore_password = open(logFile_password,'a')
+      
+    try:
       fileStore_password.writelines(time_stamp + '\t' + crtPass + '\n' )
       print(time_stamp, "__PASSWORD GENERATED__")
     except TypeError:
@@ -51,4 +50,16 @@ This is a Alphanumeric Password Genarator.
 The default behavioral setting is for password length of 10 characters.
 This default behavior is both overridable and user definable.
 You can enter the any other length you desire.
+<<<<<<< HEAD
+=======
+>>>>>>> c9311fd0520ee5d9c8d180fb2347f6d16361551a
+
+
+def main():
+	getCode()
+
+if __name__ == '__main__':
+	main()      
+
+>>>>>>> 28f730baf2a46b786f9e169cbadeee0aa0f0a4e7
 """
