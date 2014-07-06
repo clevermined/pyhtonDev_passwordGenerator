@@ -12,7 +12,6 @@ logFile_password = 'fileStore_passwordLOG'
 def getCode( char = string.ascii_uppercase + string.digits 
         + string.ascii_lowercase + string.punctuation):
     try:
-
       passWordLength = int(input("Select Password Length With An Integer Value: "))
       crtPass = "".join(random.choice(char) for x in range(passWordLength))
     except NameError:
@@ -25,6 +24,7 @@ def getCode( char = string.ascii_uppercase + string.digits
       print(time_stamp, "__PASSWORD GENERATED__")
     except TypeError:
         print("Incorrect parameter: exception_TypeError")
+    return()
    
 def sendMail():
     fp = open(logFile_password,'r')
@@ -47,34 +47,8 @@ if __name__ == '__main__':
     main()
 
 """
-
-        passWordLength = int(input("Define The Password Length With An Integer Value: "))
-        crtPass = "".join(random.choice(char) for x in range(passWordLength))
-         
-           #open file for password logging
-        fileStore_password = open('fileStore_passwordLOGT','a')
-        fileStore_password.writelines(crtPass + '\n')
-      
-        print("Generated Password: " ,crtPass)
-      
-    except TypeError:
-        print("Incorrect parameter: exception_TypeError")
-    except NameError:
-        print('Incorrect parameter: Enter a Number')
-
-"""
-"""
 This is a Alphanumeric Password Genarator.
 The default behavioral setting is for password length of 10 characters.
 This default behavior is both overridable and user definable.
 You can enter the any other length you desire.
->>>>>>> c9311fd0520ee5d9c8d180fb2347f6d16361551a
-
-
-def main():
-	getCode()
-
-if __name__ == '__main__':
-	main()      
-
 """
