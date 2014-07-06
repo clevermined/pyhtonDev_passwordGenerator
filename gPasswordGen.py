@@ -12,15 +12,13 @@ logFile_password = 'fileStore_passwordLOG'
 def getCode( char = string.ascii_uppercase + string.digits 
         + string.ascii_lowercase + string.punctuation):
     try:
-
       passWordLength = int(input("Select Password Length With An Integer Value: "))
       crtPass = "".join(random.choice(char) for x in range(passWordLength))
     except NameError:
       print("A Numermic Interger Value is Required To Process This Request: ")
       sys.exit(main())
-
-    try:		#open file for password logging
-      fileStore_password = open(logFile_password,'a')
+      
+    try:
       fileStore_password.writelines(time_stamp + '\t' + crtPass + '\n' )
       print(time_stamp, "__PASSWORD GENERATED__")
     except TypeError:
