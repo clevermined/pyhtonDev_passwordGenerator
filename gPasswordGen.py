@@ -19,6 +19,7 @@ def getCode( char = string.ascii_uppercase + string.digits
       sys.exit(main())
       
     try:
+      fileStore_password = open(logFile_password,'a')
       fileStore_password.writelines(time_stamp + '\t' + crtPass + '\n' )
       print(time_stamp, "__PASSWORD GENERATED__")
     except TypeError:
@@ -34,9 +35,9 @@ def sendMail():
     msg['From'] = 'localhost.local.domain'
     msg['To'] = 'localhost.local.domain'
 
-    smtpObject = smtplib.SMTP('localhost')
-    smtpObject.sendmail('sender',['receiver'],msg.as_string())
-    smtpObject.quit()
+    server = smtplib.SMTP('localhost')
+    server.sendmail('sender',['receiver'],msg.as_string())
+    server.quit()
 
 def main():
     getCode()
